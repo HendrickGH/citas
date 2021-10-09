@@ -1,0 +1,134 @@
+body {
+	font-family: 'Roboto Condensed', sans-serif;
+	background-image: linear-gradient(
+		to left,
+		#d9ffdc,
+		#cdffd3,
+		#c0ffca,
+		#b3ffc1,
+		#a4ffb9
+	);
+	display: grid;
+	grid: repeat(auto-fill, minmax(100px, 1fr)) / repeat(2, minmax(100px, 1fr));
+}
+.header {
+	grid-area: 1 / 2 / 2 / 3;
+}
+.main {
+	grid-area: 1 / 1 / 2 / 2;
+}
+.aside--clientes {
+	display: flex;
+	flex-direction: column;
+	padding: 3rem;
+	grid-area: 2 / 1 / 3 / 3;
+}
+@media screen and (min-width: 900px) {
+	.form-persist {
+		width: 800px;
+		align-self: center;
+	}
+}
+@media screen and (max-width: 600px) {
+	.aside--clientes {
+		padding: 0;
+	}
+	.form-persist {
+		margin-bottom: 1rem;
+		padding: 1rem 0.5rem;
+	}
+	.search {
+		margin-top: 1.3rem;
+	}
+}
+.footer {
+	grid-area: 4 / 1 / 5 / 3;
+}
+.aside--clientes-container {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.aside--clientes-container > * {
+	display: inline;
+	margin-left: 2rem;
+	flex: 1 0 30%;
+}
+.aside--clientes-container__article--title {
+	font-weight: bold;
+}
+.aside--clientes-container__article h4 {
+	font-size: 1.2rem;
+}
+form {
+	display: flex;
+	flex-direction: column;
+}
+form > * {
+	margin: 0.2rem 5rem;
+}
+@media screen and (max-width: 600px) {
+	form > * {
+		margin: 0.2rem 0.2rem;
+	}
+}
+input[type='submit'] {
+	border-radius: 0.3rem;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	padding: 0.5rem;
+	text-transform: uppercase;
+	background-color: #66ff8a;
+	font-weight: bold;
+}
+input[type='text'],
+input[type='date'],
+select {
+	outline: none;
+	border: none;
+	border-radius: 0.2rem;
+	padding: 0.3rem;
+}
+.footer {
+	display: grid;
+	background-size: cover;
+	background-image: url('assets/footer.jpg');
+	grid-template-rows: repeat(3, 1fr);
+	justify-items: center;
+	align-items: center;
+	padding: 8rem;
+}
+@media screen and (max-width: 600px) {
+	.footer {
+		padding: 2rem;
+	}
+}
+.footer p {
+	color: white;
+	font-size: 1.3rem;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+.hidden {
+	display: none;
+}
+.invalid {
+	background-color: red !important;
+	color: white !important;
+	font-size: 0.9rem;
+	cursor: no-drop !important;
+}
+.bold {
+	font-weight: bold;
+}
+.nope {
+	text-decoration: line-through;
+	font-weight: bold;
+}
+.yep {
+	color: red;
+	font-weight: bold;
+}

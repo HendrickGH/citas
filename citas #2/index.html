@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Administrador de citas</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://necolas.github.io/normalize.css/latest/normalize.css"
+		/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header class="header">
+			<div class="header--container">
+				<h1 class="header--h1">Hotel Pensylvania</h1>
+				<h2 class="header--h2">Administrador de citas</h2>
+			</div>
+		</header>
+		<main class="main">
+			<nav class="nav--form">
+				<form action="#">
+					<label for="nombre">Nombre del cliente</label>
+					<input type="text" class="form-value nombre" placeholder="Nombre" />
+					<label for="reservada">Fecha reservada</label>
+					<input type="date" class="form-value reservada" />
+					<label for="salida">Fecha de salida</label>
+					<input type="date" class="form-value salida" />
+					<label for="habitacion">Tipo de habitación</label>
+					<select name="habitacion" id="habitacion" class="form-value type-hab">
+						<option value="Premium">Premium</option>
+						<option value="Deluxe">Deluxe</option>
+						<option value="Basica">Básica</option>
+					</select>
+					<input type="submit" value="Generar cita" class="generate" />
+				</form>
+			</nav>
+		</main>
+		<aside class="aside--clientes">
+			<div class="aside--clientes-container">
+				<article class="aside--clientes-container__article manipulate">
+					<h3>Verifica que haya disponibilidad para el día acordado</h3>
+					<p>
+						No olvides que reservando en nuestro sitio web tendras un
+						<span>15% de descuento</span>
+					</p>
+				</article>
+			</div>
+			<form action="#" class="form-persist">
+				<label for=""
+					>Búsqueda de citas por <span class="bold">día</span></label
+				>
+				<input type="date" class="form-date" />
+				<input type="submit" value="Buscar" class="search" />
+			</form>
+		</aside>
+		<footer class="footer">
+			<p>Hotel Pensylvania</p>
+			<p>
+				Desarrollado por
+				<a href="https://github.com/HendrickGH" target="_blank"
+					>😸Hendrick GH</a
+				>
+			</p>
+			<p>Todos los derechos reservados &copy;</p>
+		</footer>
+	</body>
+	<script src="app.js"></script>
+</html>
